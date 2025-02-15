@@ -1,0 +1,11 @@
+Several approaches can mitigate the issues with `calc()` involving percentages and other units:
+
+1. **Avoid Mixing Units if Possible:** If feasible, try to express the width entirely using percentages or pixels, avoiding the need for `calc()` altogether.
+
+2. **Use a Container with a Defined Width:** Instead of relying on percentage calculations directly on the element, consider wrapping the element within a container element with a fixed width. Then perform `calc()` within this container, making percentages relative to the container's dimensions.   This can provide a more reliable calculation. 
+
+3. **JavaScript for Dynamic Calculation:** In complex scenarios or cases requiring precise control, JavaScript might be necessary to calculate the width dynamically based on the available space and desired margins. 
+
+4. **Fallback Values:** If precise calculation is not critical, use media queries or fallback values to handle different scenarios or browser inconsistencies.
+
+See `bugSolution.css` for an example using a container to improve the calculation accuracy.
